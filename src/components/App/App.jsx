@@ -6,14 +6,14 @@ import {
 } from 'react-router-dom';
 
 import DisplayCharacters from '../../containers/DisplayCharacters';
-import Character from '../Characters/Character';
+import RenderDetails from '../../containers/RenderDetails';
 
 export default function App() {
   return (
     <Router>
       <Switch>
         <Route exact path="/" component={DisplayCharacters} />
-        <Route exact path=":name" component={Character} />
+        <Route path="/:name" component={RenderDetails} />
       </Switch>
 
     </Router>
