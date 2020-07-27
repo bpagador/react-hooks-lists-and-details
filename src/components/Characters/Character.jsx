@@ -14,3 +14,6 @@ Character.propTypes = {
   name: PropTypes.string.isRequired,
   image: PropTypes.string.isRequired
 };
+
+
+export default Character;
