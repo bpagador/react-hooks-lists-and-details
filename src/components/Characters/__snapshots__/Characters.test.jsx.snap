@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`many characters returns many characters 1`] = `
+<ul>
+  <li
+    key="Shelley"
+  >
+    <Link
+      to="/Shelley"
+    >
+      <Character
+        image="https://vignette.wikia.nocookie.net/heyarnold/images/c/cb/Shelley.jpg/revision/latest/scale-to-width-down/310?cb=20120527025256"
+        name="Shelley"
+      />
+    </Link>
+  </li>
+  <li
+    key="Mitzi"
+  >
+    <Link
+      to="/Mitzi"
+    >
+      <Character
+        image="https://vignette.wikia.nocookie.net/heyarnold/images/d/d9/Mitzi.png/revision/latest/scale-to-width-down/310?cb=20171212070331"
+        name="Mitzi"
+      />
+    </Link>
+  </li>
+</ul>
+`;
