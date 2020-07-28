@@ -4,16 +4,17 @@ import { useDisplayCharacters } from '../hooks/useDisplayCharacter';
 
 const DisplayCharacters = () => {
   const {
-    handleClickNext,
-    handleClickPrev,
-    characters
+    handleClick,
+    characters,
+    page
   } = useDisplayCharacters();
 
   return (
     <>
-      <button onClick={handleClickPrev}>Prev</button>
-      <button onClick={handleClickNext}>Next</button>
+      {page > 1 && <button name='Prev'onClick={handleClick}>Prev</button>}
+      {page < 11 && <button name='Next' onClick={handleClick}>Next</button>}
     
+
       <Characters characters={characters} />
     </>
     

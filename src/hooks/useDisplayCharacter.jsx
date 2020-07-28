@@ -6,12 +6,9 @@ export const useDisplayCharacters = () => {
   const [characters, setCharacters] = useState([]);
   const [page, setPage] = useState(1);
 
-  const handleClickNext = () => {
-    setPage(page => page + 1);
-  };
-
-  const handleClickPrev = () => {
-    setPage(page => page - 1);
+  const handleClick = ({ target }) => {
+    if(target.name === 'Next') setPage(page => page + 1);
+    if(target.name === 'Prev') setPage(page => page - 1);
   };
     
   useEffect(() => {
@@ -23,7 +20,7 @@ export const useDisplayCharacters = () => {
 
   return {
     characters,
-    handleClickNext,
-    handleClickPrev
+    handleClick,
+    page
   };
 };
