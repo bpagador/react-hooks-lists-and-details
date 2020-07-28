@@ -10,8 +10,7 @@ exports[`App component renders App 1`] = `
     />
     <Route
       component={[Function]}
-      exact={true}
-      path=":name"
+      path="/:name"
     />
   </Switch>
 </BrowserRouter>
