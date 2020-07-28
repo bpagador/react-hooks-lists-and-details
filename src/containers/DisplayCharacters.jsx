@@ -1,11 +1,11 @@
 import React from 'react';
 import Characters from '../components/Characters/Characters';
-import { useDisplayCharacter } from '../hooks/useDisplayCharacter';
+import { useDisplayCharacters } from '../hooks/useDisplayCharacter';
 
 const DisplayCharacters = () => {
   const {
     characters
-  } = useDisplayCharacter();
+  } = useDisplayCharacters();
 
   return (
     <Characters characters={characters} />

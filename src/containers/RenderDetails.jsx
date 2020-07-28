@@ -1,19 +1,14 @@
-import React, { useState, useEffect } from 'react';
-import { useRouteMatch } from 'react-router-dom';
-import { getSingleCharacter } from '../services/APIcalls';
+import React from 'react';
 import Character from '../components/Characters/Character';
+import { useRenderDetails } from '../hooks/useRenderDetails';
 
 const RenderDetails = () => {
-  const [character, setCharacter] = useState({});
-  const match = useRouteMatch('/:name');
-
-  useEffect(() => {
-    getSingleCharacter(match.params.name)
-      .then(fetchSingle => setCharacter(fetchSingle));
-  }, []);
+  const {
+    character
+  } = useRenderDetails();
 
   return (
-    <Character {...character} />
+    <Character {...character}/>
   );
 
 };
