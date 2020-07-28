@@ -4,11 +4,19 @@ import { useDisplayCharacters } from '../hooks/useDisplayCharacter';
 
 const DisplayCharacters = () => {
   const {
+    handleClickNext,
+    handleClickPrev,
     characters
   } = useDisplayCharacters();
 
   return (
-    <Characters characters={characters} />
+    <>
+      <button onClick={handleClickPrev}>Prev</button>
+      <button onClick={handleClickNext}>Next</button>
+    
+      <Characters characters={characters} />
+    </>
+    
   );
 
 };

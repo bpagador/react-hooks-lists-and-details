@@ -4,13 +4,26 @@ import { getCharacters } from '../services/APIcalls';
 
 export const useDisplayCharacters = () => {
   const [characters, setCharacters] = useState([]);
+  const [page, setPage] = useState(1);
+
+  const handleClickNext = () => {
+    setPage(page => page + 1);
+  };
+
+  const handleClickPrev = () => {
+    setPage(page => page - 1);
+  };
     
   useEffect(() => {
-    getCharacters()
-      .then(fetchList => setCharacters(fetchList));
-  });
+    getCharacters(page)
+      .then((fetchList) => {
+        setCharacters(fetchList);
+      });
+  }, [page]);
 
   return {
-    characters
+    characters,
+    handleClickNext,
+    handleClickPrev
   };
 };
