@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`single Character returns a single character 1`] = `
+<section>
+  <h4>
+    Shelley
+  </h4>
+  <img
+    alt="Shelley"
+    src="https://vignette.wikia.nocookie.net/heyarnold/images/c/cb/Shelley.jpg/revision/latest/scale-to-width-down/310?cb=20120527025256"
+    width="250"
+  />
+</section>
+`;
